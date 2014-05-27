@@ -22,6 +22,8 @@
 		A16622E81934D20700DC078A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A16622C71934D20600DC078A /* UIKit.framework */; };
 		A16622F01934D20700DC078A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A16622EE1934D20700DC078A /* InfoPlist.strings */; };
 		A16622F21934D20700DC078A /* GeoTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A16622F11934D20700DC078A /* GeoTestTests.m */; };
+		A16622FD1935130F00DC078A /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A16622FB1935130F00DC078A /* Model.xcdatamodeld */; };
+		A16623021935148500DC078A /* gtDriverMemo.m in Sources */ = {isa = PBXBuildFile; fileRef = A16623011935148500DC078A /* gtDriverMemo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,9 @@
 		A16622ED1934D20700DC078A /* GeoTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GeoTestTests-Info.plist"; sourceTree = "<group>"; };
 		A16622EF1934D20700DC078A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A16622F11934D20700DC078A /* GeoTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoTestTests.m; sourceTree = "<group>"; };
+		A16622FC1935130F00DC078A /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		A16623001935148500DC078A /* gtDriverMemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = gtDriverMemo.h; sourceTree = "<group>"; };
+		A16623011935148500DC078A /* gtDriverMemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = gtDriverMemo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +127,9 @@
 				A16622DC1934D20600DC078A /* gtViewController.m */,
 				A16622DE1934D20700DC078A /* Images.xcassets */,
 				A16622CA1934D20600DC078A /* Supporting Files */,
+				A16622FB1935130F00DC078A /* Model.xcdatamodeld */,
+				A16623001935148500DC078A /* gtDriverMemo.h */,
+				A16623011935148500DC078A /* gtDriverMemo.m */,
 			);
 			path = GeoTest;
 			sourceTree = "<group>";
@@ -256,7 +264,9 @@
 			files = (
 				A16622DD1934D20600DC078A /* gtViewController.m in Sources */,
 				A16622D01934D20600DC078A /* main.m in Sources */,
+				A16623021935148500DC078A /* gtDriverMemo.m in Sources */,
 				A16622D41934D20600DC078A /* gtAppDelegate.m in Sources */,
+				A16622FD1935130F00DC078A /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,6 +491,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A16622FB1935130F00DC078A /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A16622FC1935130F00DC078A /* Model.xcdatamodel */,
+			);
+			currentVersion = A16622FC1935130F00DC078A /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A16622B81934D20600DC078A /* Project object */;
 }
