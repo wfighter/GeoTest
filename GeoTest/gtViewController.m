@@ -24,18 +24,24 @@
     //
     _myMileage.keyboardType = UIKeyboardTypeNumberPad;
     _myRefillGallon.keyboardType = UIKeyboardTypeDecimalPad;
-    _myGasPrice.keyboardType = UIKeyboardTypeDecimalPad;
     [_myMileageStepper setMaximumValue:(_myDriveMemo.savedMileage+255)];
     [_myMileageStepper setMinimumValue:_myDriveMemo.savedMileage];
     [_myMileageStepper setContinuous:YES];
     [_myMileageStepper setWraps:NO];
     [_myMileageStepper setStepValue:1];
+    [_gasPriceStepper setMaximumValue:5.00];
+    [_gasPriceStepper setMinimumValue:0.00];
+    [_gasPriceStepper setContinuous:YES];
+    [_gasPriceStepper setWraps:NO];
+    [_gasPriceStepper setStepValue:0.01];
     _myMileage.text=[NSString stringWithFormat:@"%llu",_myDriveMemo.savedMileage];
     [_myRefillPercentage setMaximumValue:100];
     [_myRefillPercentage setMinimumValue:0];
     _myRefillGallon.text = @"0.0";
     _myRefillPercentage.value = 0;
     _labelTankSize.text = [NSString stringWithFormat:@"/%.2f", _myDriveMemo.savedTankSize];
+    _gasPricesText.text = [NSString stringWithFormat:@"$%.2f/gallon", _myDriveMemo.savedFuelPrice];
+    _gasPriceStepper.value = _myDriveMemo.savedFuelPrice;
 }
 
 - (void)didReceiveMemoryWarning
@@ -84,6 +90,10 @@
         [alert show];
     }
     [self.view endEditing:YES];
+}
+- (IBAction)fuelPriceChanged:(id)sender {
+    [self.view endEditing:YES];
+    _gasPricesText.text = [[NSString alloc] initWithFormat:@"$%.2f/gallon", _gasPriceStepper.value];
 }
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event

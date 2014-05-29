@@ -10,13 +10,14 @@
 #import "gtDriverMemo.h"
 
 @interface gtViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIScrollView *myScrollView;
 @property (weak, nonatomic) IBOutlet UILabel *labelTankSize;
 @property (weak, nonatomic) IBOutlet UITextField *myMileage;
 @property (weak, nonatomic) IBOutlet UIStepper *myMileageStepper;
 @property (weak, nonatomic) IBOutlet UISlider *myRefillPercentage;
 @property (weak, nonatomic) IBOutlet UITextField *myRefillGallon;
-@property (weak, nonatomic) IBOutlet UITextField *myGasPrice;
+@property (weak, nonatomic) IBOutlet UILabel *gasPricesText;
+@property (weak, nonatomic) IBOutlet UIStepper *gasPriceStepper;
+
 @property gtDriverMemo* myDriveMemo;
 @property UInt64 newMileage;
 @property float newRefill;

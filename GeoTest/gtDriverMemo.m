@@ -13,6 +13,7 @@
 -(id)init{
     _savedMileage = 9999;
     _savedTankSize = 16;
+    _savedFuelPrice = 3.78;
     return self;
 }
 @end

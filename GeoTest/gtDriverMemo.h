@@ -11,4 +11,5 @@
 @interface gtDriverMemo : NSObject
 @property UInt64 savedMileage;
 @property float savedTankSize;
+@property float savedFuelPrice;
 @end
